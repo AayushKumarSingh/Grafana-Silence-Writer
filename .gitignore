@@ -205,3 +205,65 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# -------------------
+# React
+# -------------------
+my-app/node_modules/
+my-app/build/
+my-app/.env
+my-app/.DS_Store
+my-app/npm-debug.log*
+my-app/yarn-debug.log*
+my-app/yarn-error.log*
+
+# -------------------
+# Flask / Python
+# -------------------
+server/__pycache__/
+server/*.pyc
+server/*.pyo
+server/*.pyd
+
+# Virtual environments
+server/venv/
+server/.venv/
+venv/
+
+# Environment variables
+server/.env
+.env
+
+# Flask instance folder
+server/instance/
+
+# Logs
+*.log
+
+# -------------------
+# OS files
+# -------------------
+.DS_Store
+Thumbs.db
+
+# -------------------
+# VS Code
+# -------------------
+.vscode/
+
+# -------------------
+# Python cache
+# -------------------
+__pycache__/
+*.py[cod]
+
+# -------------------
+# Testing
+# -------------------
+.coverage
+pytest_cache/
+
+# -------------------
+# Node cache
+# -------------------
+node_modules/

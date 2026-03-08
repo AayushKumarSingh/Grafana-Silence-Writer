@@ -1,0 +1,177 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Create Silence Styles */
+.create-silence-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.create-silence-title {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  font-weight: 300;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.matchers-section, .time-section, .comment-section {
+  margin-bottom: 30px;
+}
+
+.matchers-section h3, .time-section h3, .comment-section h3 {
+  color: #34495e;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.matcher-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+  animation: slideIn 0.5s ease-out;
+}
+
+.input-field {
+  padding: 12px 15px;
+  border: 2px solid #bdc3c7;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: white;
+  flex: 1;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+  transform: translateY(-2px);
+}
+
+.textarea-field {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.add-matcher-btn, .submit-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.add-matcher-btn {
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  color: white;
+  margin-top: 10px;
+}
+
+.add-matcher-btn:hover {
+  background: linear-gradient(45deg, #2980b9, #21618c);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+.submit-btn {
+  background: linear-gradient(45deg, #27ae60, #229954);
+  color: white;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(45deg, #229954, #1e8449);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .create-silence-container {
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .matcher-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .create-silence-title {
+    font-size: 2em;
+  }
+}
