@@ -5,6 +5,9 @@ class UserRepository:
 
     @staticmethod
     def create_user(username: str, team: str, folder_access: str) -> int:
+        if folder_access.find(".*") == -1:
+            return -1
+
         user = UserModel(
                     username=username,
                     team=team,
@@ -22,7 +25,7 @@ class UserRepository:
 
         user = UserModel.query.get(_id)
 
-        if user:
+        if user and folder.find(".*") != -1:
             if len(user.folder_access):
                 folder = "," + folder
             user.folder_access += "|".join(folder.split(","))
