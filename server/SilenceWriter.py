@@ -1,5 +1,6 @@
 import requests
 from config import Config
+from logger import logger
 import json
 
 
@@ -74,4 +75,4 @@ class SilenceWriter:
             payload["endsAt"] = payload["endsAt"] + ":00+05:30"
 
         except KeyError:
-            print("error", payload)
+            logger.exception("[execution occurred]", user)
